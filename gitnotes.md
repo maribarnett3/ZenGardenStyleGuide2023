@@ -2,4 +2,4 @@
 
 `git add .`
 `git commit -am "message"`
-`git push origin master`
+`git push origin main`
