@@ -7,6 +7,7 @@
 
 ## Git Tricks
 * `git clone <url>` clone locally
+* `git branch` list branches available locally
 * `git checkout -b feature/<nickname>` checkout out personal branch
 * `git pull origin main` pull updates (DO REGULARLY)
 * `git add -A` stage all new changes
