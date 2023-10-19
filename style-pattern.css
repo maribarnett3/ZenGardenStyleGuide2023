@@ -28,7 +28,7 @@ p, a, li, label {
 }
 
 html {
-  background-color: #02bcd6;
+  background-color: #B5e2fa;
   padding: 5%;
 }
 
@@ -66,11 +66,11 @@ section {
 }
 
 .primary {
-  background-color: #ffd868;
+  background-color: #bcd13c;
 }
 
 .accent1 {
-  background-color: #dbb42c;
+  background-color: #ffd868;
 }
 
 .accent2 {
