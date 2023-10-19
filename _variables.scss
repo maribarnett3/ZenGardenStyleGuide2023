@@ -1,9 +1,10 @@
-$fonts-headline: "arial narrow", Arial, Verdana, sans-serif;
-$fonts-body: verdana, arial, sans-serif;
-$background-color: #daede2;
-$primary: #77c4d3;
-$accent1: #ea2e49;
-$accent2: rgba(246, 247, 146, 0.9);
-$grey-sidebar: rgba(51, 55, 69, 0.9);
-$text-dark: #333;
-$text-light: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Itim&display=swap');
+
+$background-color: #02bcd6;
+$font-color: #4b3f3a;
+$light-font-color: white;
+$accent-color: #dbb42c;
+$element-color: #ffd868;
+
+$heading-font: "Amatic SC", "Times New Roman", serif;
+$para-font: "Itim", "Arial", sans-serif;
