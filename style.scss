@@ -1,20 +1,387 @@
 // style.scss
 @use 'atoms' as a;
 @use 'variables' as v;
+@use 'svgs' as s;
+
+:root {
+
+  /* Padding */
+  --padding-large:               20px;
+  --padding-medium:              15px;
+  --padding-small:               10px;
+  --padding-button-inner-large:  15px;
+  --padding-button-outer-large:  32px;
+  --padding-button-inner-medium: 10px;
+  --padding-button-outer-medium: 16px;
+  --padding-button-inner-small:  5px;
+  --padding-button-outer-small:  8px;    
+  --padding-html-large:           5%;
+  --padding-html-medium:          7%;
+  --padding-html-small:           9%;
+  --padding-separation-one:      50%;
+  --padding-separation-two:      75%;
+  --padding-separation-none:      0%;
+  --padding-section-large:       1em;
+  --padding-section-medium:      0.5em;
+  --padding-section-small:       0.25em;
+
+  /* White Space */
+  --white-space-large:             0;
+  --white-space-medium:            1;
+  --white-space-small:             2;
+
+  /* Font Size */
+  --font-size-large:            24px;
+  --font-size-medium:           18px;
+  --font-size-small:            16px;
+  --font-size-h1-large:          6em;
+  --font-size-h2-large:          5em;   
+  --font-size-h3-large:          4em;
+  --font-size-h4-large:          3em;
+  --font-size-h1-medium:         5.5em;
+  --font-size-h2-medium:         4.5em;   
+  --font-size-h3-medium:         3.5em;
+  --font-size-h4-medium:         2.5em;  
+  --font-size-h1-small:          5em;
+  --font-size-h2-small:          4em;   
+  --font-size-h3-small:          3em;
+  --font-size-h4-small:          2em;
+
+  /* Bicycle */
+  --bicycle-large:              144px;
+  --bicycle-medium:              84px;
+  --bicycle-small:               60px;  
+
+
+}
+
+/* Large Responsive */
+@media (min-width: 1300px)
+{
+
+  html {
+
+    padding: var(--padding-html-large);
+
+  }
+
+  body {
+
+    @include a.white-space(var(--white-space-large));
+    font-size: var(--font-size-large);
+
+
+  }
+
+  section {
+
+    @include a.white-space(var(--white-space-large));
+    
+
+  }
+
+
+  button {
+
+    font-size: var(--font-size-large);
+    padding: var(--padding-button-inner-large) var(--padding-button-outer-large);
+
+
+  }  
+
+  .fa.fa-bicycle {
+
+    font-size: var(--bicycle-large);
+
+  }
+
+  h1 {
+      font-size: var(--font-size-h1-large);
+  }
+
+  h2 {
+      font-size: var(--font-size-h2-large);
+  }
+
+  h3 {
+      font-size: var(--font-size-h3-large);
+  }
+
+  h4 {
+      font-size: var(--font-size-h4-large);
+  }
+
+  .preamble
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+  .explanation
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: var(--padding-separation-one);
+   
+  }
+
+  .participation
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+  .benefits
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: var(--padding-separation-one);
+   
+  }
+
+  .requirements
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+ .bicycle {
+
+  width: var(--bicycle-large); 
+
+ }
+
+}
+
+@media (min-width: 600px) and (max-width: 1299px)
+{
+
+  
+  html {
+
+    padding: var(--padding-html-medium);
+
+  }
+
+  body {
+
+    @include a.white-space(var(--white-space-medium));
+    font-size: var(--font-size-medium);
+
+
+  }
+
+  section {
+
+    @include a.white-space(var(--white-space-medium));
+    
+
+  }
+
+
+  button {
+
+    font-size: var(--font-size-medium);
+    padding: var(--padding-button-inner-medium) var(--padding-button-outer-medium);
+
+
+  }  
+
+
+  h1 {
+      font-size: var(--font-size-h1-medium);
+  }
+
+  h2 {
+      font-size: var(--font-size-h2-medium);
+  }
+
+  h3 {
+      font-size: var(--font-size-h3-medium);
+  }
+
+  h4 {
+      font-size: var(--font-size-h4-medium);
+  }
+
+  .preamble
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+  .explanation
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: var(--padding-separation-one);
+   
+  }
+
+  .participation
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+  .benefits
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: var(--padding-separation-one);
+   
+  }
+
+  .requirements
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: var(--padding-separation-one);
+   
+  }
+
+  .bicycle {
+
+    width: var(--bicycle-medium); 
+  
+   }
+
+
+}
+
+  @media (max-width: 599px)
+  {
+  
+    
+    html {
+  
+      padding: var(--padding-html-small);
+  
+    }
+  
+    body {
+  
+      @include a.white-space(var(--white-space-small));
+      font-size: var(--font-size-small);
+  
+  
+    }
+  
+    section {
+  
+      @include a.white-space(var(--white-space-small));
+      
+  
+    }
+  
+  
+    button {
+  
+      font-size: var(--font-size-small);
+      padding: var(--padding-button-inner-small) var(--padding-button-outer-small);
+  
+  
+    }  
+
+    h1 {
+      font-size: var(--font-size-h1-small);
+    }
+
+    h2 {
+        font-size: var(--font-size-h2-small);
+    }
+
+    h3 {
+        font-size: var(--font-size-h3-small);
+    }
+
+    h4 {
+        font-size: var(--font-size-h4-small);
+    }
+
+    .preamble
+    {
+      padding-right: var(--padding-separation-none);
+     
+    }
+  
+    .explanation
+    {
+      padding-left: var(--padding-separation-none);
+     
+    }
+  
+    .participation
+    {
+      padding-right: var(--padding-separation-none);
+     
+    }
+  
+    .benefits
+    {
+      padding-left: var(--padding-separation-none);
+     
+    }
+  
+    .requirements
+    {
+      padding-right: var(--padding-separation-none);
+     
+    }
+  
+    .bicycle {
+
+      width: var(--bicycle-small); 
+    
+     }    
+
+}
 
 * {
     box-sizing: border-box;
   }
   html {
     background-color: v.$background-color;
-    padding: 5%;
+
   }
   
   body {
     font-family: v.$para-font;
     color: v.$font-color;
     background-color: v.$element-color;
-    @include a.white-space(0);
+
   }
 
   h1
@@ -36,55 +403,7 @@
     text-align: left;
   }
 
-  .preamble
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-right: 50%;
    
-  }
-
-  .explanation
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding-left: 50%;
-   
-  }
-
-  .participation
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-right: 50%;
-   
-  }
-
-  .benefits
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding-left: 50%;
-   
-  }
-
-  .requirements
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-right: 50%;
-   
-  }
 
   .bicycles
   {
@@ -99,8 +418,8 @@
   }
 
   section {
-    background-color: white;
-    @include a.white-space(1em);
+    background-color: v.$light-font-color;
+
   }
 
   .summary
@@ -129,11 +448,10 @@
     background-color: v.$background-color; /* Green */
     border: none;
     color: v.$light-font-color;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+  
 
 
   }
