@@ -5,7 +5,7 @@
   
     --bicycle-inner:            white;
     --bicycle-stroke:       darkgreen;
-    --bicycle-stroke-width:           4;
+    --bicycle-stroke-width:           2.5;
    
     }
   </style>
